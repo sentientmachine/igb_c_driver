@@ -23,7 +23,7 @@ Elite instructions:
 16.  sudo modprobe igb insmod igb
 17.  systemctl restart NetworkManager
 18.  Now we're using Intel Internet Nic card with the compiled source code above.
-
+We know we're using the new version because this is different:   #modinfo e1000 | grep version
 
 
 
