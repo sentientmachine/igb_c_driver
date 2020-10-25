@@ -1,3 +1,31 @@
+Elite instructions:
+
+1.  Reset CMOS/BIOS/UEFI boot screen utility to defaults.
+2.  Download Fedora 32 .ISO image
+3.  Burn it to a DVD and install Fedora 32 on gpu rig Oct_2020
+4.  Boot to Fedora 32 from nvme disk.
+5.  sudo yum update
+6.  mkdir /home/el/bin/
+7.  git clone https://github.com/sentientmachine/igb_c_driver.git
+8.  sudo yum install gcc make
+9.  sudo yum install kernel kernel-devel
+10.  ?? sudo yum install kernel-headers
+11.  sudo yum update
+12.  sudo modinfo igb
+13.  lspci -k | grep Ether
+14.  reboot
+15.  cd /home/el/bin/igb_c_driver/src
+16.  sudo make install
+17.  modinfo igb
+18.  lspci -k | grep ether
+19.  rmmod igb
+20.  sudo modprobe igb 
+16.  sudo modprobe igb insmod igb
+17.  systemctl restart NetworkManager
+18.  Now we're using Intel Internet Nic card with the compiled source code above.
+
+
+
 
 igb Linux* Base Driver for Intel(R) Ethernet Network Connection
 
